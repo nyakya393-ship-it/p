@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Splatoon 3 Weapon Analyzer
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="top-header">
+
+    <div>
+
+        <div class="title">
+            WEAPON ANALYZER
+        </div>
+
+        <div class="subtitle">
+            Splatoon 3 Weapon Performance
+        </div>
+
+    </div>
+
+
+    <div
+        id="wikiStatus"
+        class="wiki-status"
+    >
+        Wiki接続中...
+    </div>
+
+</header>
+
+
+
+<div class="app">
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-title">
+            WEAPONS
+        </div>
+
+
+        <div
+            id="categories"
+            class="categories"
+        ></div>
+
+
+        <div
+            id="weaponList"
+            class="weapon-list"
+        >
+
+            <div class="loading">
+                Wikiから武器データを取得中...
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="main">
+
+
+        <!-- WEAPON HEADER -->
+
+        <section
+            id="weaponHeader"
+            class="weapon-header"
+        >
+
+            <div class="loading">
+                読み込み中...
+            </div>
+
+        </section>
+
+
+
+        <!-- RANGE -->
+
+        <section class="panel">
+
+
+            <div class="panel-title">
+                RANGE
+            </div>
+
+
+            <div class="panel-description">
+                射程と爆風範囲
+            </div>
+
+
+            <div
+                id="rangeGraph"
+                class="range-graph"
+            ></div>
+
+
+            <div class="range-scale">
+
+                <span>0</span>
+                <span>2</span>
+                <span>4</span>
+                <span>6</span>
+                <span>8</span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- BLAST -->
+
+        <section class="panel">
+
+
+            <div class="panel-title">
+                BLAST RADIUS
+            </div>
+
+
+            <div class="panel-description">
+                爆風中心からの範囲
+            </div>
+
+
+            <div
+                id="blastGraph"
+                class="blast-graph"
+            ></div>
+
+
+        </section>
+
+
+
+        <!-- DAMAGE -->
+
+        <section class="panel">
+
+
+            <div class="panel-title">
+                DAMAGE
+            </div>
+
+
+            <div class="panel-description">
+                距離ごとのダメージ
+            </div>
+
+
+            <div
+                id="damageGraph"
+                class="damage-graph"
+            ></div>
+
+
+        </section>
+
+
+
+        <!-- DECAY -->
+
+        <section class="panel">
+
+
+            <div class="panel-title">
+                DAMAGE DECAY
+            </div>
+
+
+            <div class="panel-description">
+                距離によるダメージ変化
+            </div>
+
+
+            <div
+                id="decayGraph"
+                class="decay-graph"
+            ></div>
+
+
+        </section>
+
+
+
+        <!-- STATS -->
+
+        <section class="panel">
+
+
+            <div class="panel-title">
+                SPECIFICATIONS
+            </div>
+
+
+            <div
+                id="stats"
+                class="stats"
+            ></div>
+
+
+        </section>
+
+
+
+        <footer>
+
+            Data source:
+            <a
+                href="https://splatoonwiki.org/wiki/Main_Page"
+                target="_blank"
+                rel="noopener"
+            >
+                Inkipedia
+            </a>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
